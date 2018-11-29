@@ -9,7 +9,7 @@ export const appRoutes: Routes = [
     {path: 'produit', component: ProduitComponent},
     {path: 'dashboard', component: DashboardComponent},
     {path: '', redirectTo: '/dashboard', pathMatch: 'full'}
-];
+    ];
 
 @NgModule({
     imports: [
