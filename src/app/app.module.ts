@@ -10,6 +10,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { ContentComponent } from './content/content.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import {ReactiveFormsModule} from '@angular/forms';
+import {ProduitService} from './produit/produit.service';
+import {HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -23,9 +26,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+      ReactiveFormsModule, HttpClientModule
   ],
-  providers: [ProduitMockService],
+  providers: [ProduitMockService, ProduitService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
